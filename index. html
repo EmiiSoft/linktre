@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emy Jubel | Official Links</title>
+
+<style>
+:root {
+  --bg1: #0b0c10;
+  --bg2: #12131a;
+  --card: #171820;
+  --accent: #25D366;
+  --text: #ffffff;
+  --muted: #b3b3b3;
+  --border: rgba(255,255,255,.08);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(800px circle at top, #1b1c28, transparent 60%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+  color: var(--text);
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeUp .9s ease forwards;
+}
+
+/* PROFILE */
+.logo {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 14px;
+  box-shadow: 0 0 0 4px rgba(255,255,255,.05),
+              0 12px 35px rgba(0,0,0,.6);
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+/* BUTTON */
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #1d1e27, #14151c);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  transition: all .25s ease;
+}
+
+.link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.55);
+}
+
+/* PAYMENT BUTTON */
+.payment-btn {
+  background: linear-gradient(135deg, var(--accent), #1fa855);
+  color: #000;
+  font-weight: 600;
+  border: none;
+}
+
+/* PAYMENT BOX */
+.payment {
+  margin-top: 12px;
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #1a1b24, #14151c);
+  border: 1px solid var(--border);
+  text-align: center;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .6s ease, opacity .4s ease;
+}
+
+.payment.show {
+  max-height: 1500px;
+  opacity: 1;
+}
+
+.payment .notice {
+  font-size: 12px;
+  color: #ffcc66;
+  margin-bottom: 12px;
+}
+
+.payment p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+.payment strong {
+  color: var(--text);
+}
+
+.payment img {
+  width: 210px;
+  margin: 10px 0 18px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.6);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGO -->
+  <img src="https://i.imgur.com/LOGO.png" class="logo" alt="Emy Jubel">
+
+  <h1>Emy Jubel</h1>
+  <div class="subtitle">Official Link & Payment</div>
+
+  <!-- LINKS -->
+  <a href="https://instagram.com/" class="link">Instagram</a>
+  <a href="https://tiktok.com/" class="link">TikTok</a>
+  <a href="#" class="link">Group</a>
+  <a href="https://wa.me/6283137741581" class="link">WhatsApp Jaspost</a>
+  <a href="https://wa.me/6283137741581" class="link">WhatsApp Rekber</a>
+
+  <!-- PAYMENT -->
+  <button class="link payment-btn" onclick="togglePayment()">
+    Payment Emy Jubel
+  </button>
+
+  <div class="payment" id="payment">
+    <div class="notice">
+      ⚠️ Payment resmi hanya melalui metode di bawah ini
+    </div>
+
+    <p><strong>Dana / OVO / Gopay</strong></p>
+    <p>0831-3774-1581</p>
+    <p><strong>A.n:</strong> Emy Jubel</p>
+
+    <p><strong>QRIS Dana</strong></p>
+    <img src="https://i.imgur.com/QRISDANA.png">
+
+    <p><strong>QRIS Gopay</strong></p>
+    <img src="https://i.imgur.com/QRISGOPAY.png">
+
+    <p><strong>QRIS Allpay</strong></p>
+    <img src="https://i.imgur.com/QRISALLPAY.png">
+  </div>
+
+</div>
+
+<script>
+function togglePayment() {
+  document.getElementById("payment").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
